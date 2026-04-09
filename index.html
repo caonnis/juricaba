@@ -847,7 +847,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" onclick="document.getElementById('splash').style.display='flex';document.getElementById('splash').classList.remove('hidden');return false;" class="nav-logo">
+  <a href="#hero" class="nav-logo">
     <svg height="26" viewBox="0 0 240 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Juris CABA">
       <text font-family="'DM Sans', system-ui, sans-serif" font-size="20" y="25" x="120" text-anchor="middle">
         <tspan font-weight="700" letter-spacing="5" fill="#1A5C42">JURIS</tspan><tspan font-weight="600" letter-spacing="3" fill="#9E9B95" dx="6">CABA</tspan>
@@ -1425,6 +1425,12 @@
     var s = document.getElementById("splash");
     s.classList.add("hidden");
     setTimeout(function(){ s.style.display="none"; }, 650);
+    sessionStorage.setItem("splashSeen", "1");
+  }
+
+  if (sessionStorage.getItem("splashSeen")) {
+    var s = document.getElementById("splash");
+    s.style.display = "none";
   }
 
   document.addEventListener('DOMContentLoaded', function() {
