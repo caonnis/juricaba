@@ -128,6 +128,16 @@
   ]
 }
 </script>
+<script>
+  function splashEnter() {
+    var s = document.getElementById('splash');
+    if (!s) return;
+    s.classList.add('hidden');
+    setTimeout(function(){ s.style.display='none'; }, 650);
+    try { sessionStorage.setItem('splashSeen','1'); } catch(e){}
+  }
+  window.splashEnter = splashEnter;
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W495WNBTJ"></script>
 <script>
