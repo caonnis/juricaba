@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Juris CABA · Sucesiones</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231A5C42'/%3E%3Ctext font-family='Georgia%2C serif' font-style='italic' font-size='20' font-weight='700' fill='white' x='16' y='23' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -144,12 +144,10 @@
   .form-submit:hover { background: var(--ink); transform: translateY(-1px); }
   .form-note { font-size: 11px; color: var(--ink-muted); text-align: center; margin-top: 12px; }
 
-  /* ══ NEW FOOTER ══ */
+  /* ══ FOOTER ══ */
   footer { background: #080f0b; padding: 0; }
   .footer-main { max-width: 1200px; margin: 0 auto; padding: 64px 5% 52px; display: grid; grid-template-columns: 220px 1fr; gap: 80px; align-items: start; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .footer-brand-logo { display: flex; align-items: baseline; gap: 0; margin-bottom: 20px; text-decoration: none; }
-  .footer-brand-juris { font-family: var(--serif); font-style: italic; font-size: 20px; color: rgba(255,255,255,0.9); letter-spacing: -0.01em; }
-  .footer-brand-caba { font-family: var(--sans); font-size: 10px; font-weight: 300; letter-spacing: 0.42em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-left: 7px; padding-right: 0.42em; align-self: center; }
+  .footer-brand-logo { display: flex; align-items: center; margin-bottom: 14px; text-decoration: none; }
   .footer-brand-desc { font-size: 12px; color: rgba(255,255,255,0.28); line-height: 1.7; max-width: 180px; font-weight: 300; }
   .footer-nav-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .footer-col-title { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 18px; }
@@ -470,13 +468,16 @@
   </div>
 </section>
 
-<!-- ══ FOOTER REDISEÑADO ══ -->
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
+      <!-- mismo SVG que el nav, adaptado al fondo oscuro del footer -->
       <a href="#hero" class="footer-brand-logo">
-        <span class="footer-brand-juris">Juris</span>
-        <span class="footer-brand-caba">CABA</span>
+        <svg height="26" viewBox="0 0 200 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Juris CABA">
+          <text font-family="'DM Sans', system-ui, sans-serif" font-size="20" y="25" x="0" text-anchor="start">
+            <tspan font-weight="700" letter-spacing="5" fill="rgba(255,255,255,0.9)">JURIS</tspan><tspan font-weight="600" letter-spacing="3" fill="rgba(255,255,255,0.32)" dx="6">CABA</tspan>
+          </text>
+        </svg>
       </a>
       <p class="footer-brand-desc">Estudio jurídico especializado en sucesiones y herencias en la Ciudad de Buenos Aires.</p>
     </div>
