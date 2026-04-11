@@ -364,7 +364,7 @@
     </div>
     <div class="sp-tagline">Sucesiones &nbsp;·&nbsp; Herencias &nbsp;·&nbsp; Patrimonio</div>
     <div class="sp-enter-wrap">
-      <button class="sp-btn" onclick="splashEnter()">
+      <button class="sp-btn" onclick="window.splashEnter()">
         Ingresar
         <svg class="sp-arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
       </button>
@@ -706,13 +706,14 @@
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initTicker); } else { initTicker(); }
 })();
 
-function splashEnter() {
+window.splashEnter = function() {
   var s = document.getElementById('splash');
+  if (!s) return;
   s.classList.add('hidden');
   setTimeout(function(){ s.style.display='none'; }, 650);
-  sessionStorage.setItem('splashSeen','1');
-}
-if (sessionStorage.getItem('splashSeen')) { document.getElementById('splash').style.display='none'; }
+  try { sessionStorage.setItem('splashSeen','1'); } catch(e){}
+};
+try { if (sessionStorage.getItem('splashSeen')) { var s = document.getElementById('splash'); if(s) s.style.display='none'; } } catch(e){}
 
 document.addEventListener('DOMContentLoaded', function() {
   function toggleMobileMenu() {
