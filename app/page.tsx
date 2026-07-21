@@ -1,7 +1,6 @@
 import { SiteNav } from "@/components/site-nav"
 import { Hero } from "@/components/hero"
 import { ConsultationTypes } from "@/components/consultation-types"
-import { WhyPaid } from "@/components/why-paid"
 import { PainPoints } from "@/components/pain-points"
 import { Expertise } from "@/components/expertise"
 import { Services } from "@/components/services"
@@ -17,7 +16,6 @@ export default function Page() {
       <SiteNav />
       <Hero />
       <ConsultationTypes />
-      <WhyPaid />
       <PainPoints />
       <Expertise />
       <Services />

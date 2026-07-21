@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { ArrowRight, ShieldCheck, Scale, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -13,11 +14,41 @@ const fade = {
   }),
 }
 
+const WORDS = ["complicado", "burocrático", "estresante", "incierto", "desgastante", "difícil"]
+
 const TRUST = [
   { icon: Scale, label: "Especialización exclusiva en sucesiones" },
   { icon: ShieldCheck, label: "+15 años de experiencia en CABA" },
   { icon: Clock, label: "Respuesta en menos de 24 hs" },
 ]
+
+function RollingWord() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % WORDS.length)
+    }, 2200)
+    return () => clearInterval(id)
+  }, [])
+
+  return (
+    <span className="relative inline-block h-[1.15em] overflow-hidden align-bottom">
+      <AnimatePresence mode="wait">
+        <motion.em
+          key={WORDS[index]}
+          initial={{ y: "110%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 1 }}
+          exit={{ y: "-110%", opacity: 0 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-block not-italic italic text-green"
+        >
+          {WORDS[index]}
+        </motion.em>
+      </AnimatePresence>
+    </span>
+  )
+}
 
 export function Hero() {
   return (
@@ -49,7 +80,7 @@ export function Hero() {
           className="mb-7 inline-flex items-center gap-2 rounded-full bg-green-light px-3.5 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-green"
         >
           <span className="size-1.5 rounded-full bg-green" />
-          Estudio jurídico · Capital Federal
+          Especialistas en sucesiones · Capital Federal
         </motion.div>
 
         <motion.h1
@@ -59,8 +90,11 @@ export function Hero() {
           animate="show"
           className="font-serif text-4xl leading-[1.08] tracking-tight text-ink text-balance sm:text-5xl md:text-6xl"
         >
-          Reservá una consulta jurídica con{" "}
-          <em className="italic text-green">un abogado</em>.
+          Ordenar una herencia
+          <br />
+          no tiene que ser
+          <br />
+          <RollingWord />
         </motion.h1>
 
         <motion.p
@@ -70,8 +104,9 @@ export function Hero() {
           animate="show"
           className="mt-6 max-w-xl text-lg font-light leading-relaxed text-ink-soft text-pretty"
         >
-          Recibí un análisis profesional y una estrategia clara para tu caso. La
-          primera reunión es una consulta de trabajo, no una charla informal.
+          Te ayudamos a resolver el proceso sucesorio en CABA con claridad,
+          acompañamiento y sin sorpresas. Sin vueltas, sin tecnicismos
+          innecesarios.
         </motion.p>
 
         <motion.div
@@ -83,11 +118,11 @@ export function Hero() {
         >
           <Button asChild size="lg">
             <a href="#reservar">
-              Reservar consulta <ArrowRight className="size-4" />
+              Consultá <ArrowRight className="size-4" />
             </a>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href="#consultas">Conocer tipos de consulta</a>
+            <a href="#proceso">¿Cuánto lleva una sucesión?</a>
           </Button>
         </motion.div>
 
