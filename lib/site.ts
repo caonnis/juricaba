@@ -28,8 +28,8 @@ export const CONSULTATIONS: Consultation[] = [
     duration: "20 minutos",
     description:
       "Ideal para resolver dudas puntuales y recibir orientación jurídica inicial.",
-    includes: ["Videollamada o presencial", "Orientación legal", "Próximos pasos"],
-    cta: "Reservar Consulta Express",
+    includes: ["Videollamada", "Orientación legal", "Próximos pasos"],
+    cta: "Reservar",
   },
   {
     id: "estrategica",
@@ -46,7 +46,7 @@ export const CONSULTATIONS: Consultation[] = [
       "Estimación de honorarios",
       "Plan de acción",
     ],
-    cta: "Reservar Consulta Estratégica",
+    cta: "Reservar",
   },
   {
     id: "integral",
@@ -60,6 +60,6 @@ export const CONSULTATIONS: Consultation[] = [
       "Revisión documental extensa",
       "Plan de acción detallado",
     ],
-    cta: "Reservar Consulta Integral",
+    cta: "Reservar",
   },
 ]
