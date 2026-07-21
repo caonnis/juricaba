@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.75rem;
+
+  /* Brand palette (preserved from Juris CABA) */
+  --sand: #f7f4ef;
+  --sand-mid: #ede8df;
+  --green: #1a5c42;
+  --green-mid: #1d6b4f;
+  --green-deep: #0f2d1f;
+  --green-light: #e8f5ef;
+  --ink: #161612;
+  --ink-soft: #6b6860;
+  --ink-muted: #9e9b95;
+
+  /* Semantic tokens */
+  --background: #ffffff;
+  --foreground: #161612;
+  --card: #ffffff;
+  --card-foreground: #161612;
+  --popover: #ffffff;
+  --popover-foreground: #161612;
+  --primary: #1a5c42;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f4ef;
+  --secondary-foreground: #161612;
+  --muted: #f7f4ef;
+  --muted-foreground: #6b6860;
+  --accent: #e8f5ef;
+  --accent-foreground: #1a5c42;
+  --destructive: #b23b2e;
+  --destructive-foreground: #ffffff;
+  --border: rgba(22, 22, 18, 0.1);
+  --input: rgba(22, 22, 18, 0.12);
+  --ring: #1a5c42;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-sand: var(--sand);
+  --color-sand-mid: var(--sand-mid);
+  --color-green: var(--green);
+  --color-green-mid: var(--green-mid);
+  --color-green-deep: var(--green-deep);
+  --color-green-light: var(--green-light);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-dm-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
