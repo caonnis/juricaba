@@ -357,6 +357,386 @@
   .sp-btn:hover .sp-arrow { opacity:0.8; transform:translateX(4px); }
   @keyframes spFade { from{opacity:0} to{opacity:1} }
   @keyframes spRise { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ============================================
+   SECCIÓN DE RESERVAS
+   ============================================ */
+
+.reservas-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ENCABEZADO --- */
+.reservas-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reservas-badge {
+    display: inline-block;
+    background: #1a365d;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.reservas-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0a1929;
+    margin-bottom: 12px;
+}
+
+.reservas-subtitle {
+    font-size: 18px;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- BANNER UMA (Transparencia) --- */
+.uma-banner {
+    background: #eef2ff;
+    border-left: 5px solid #1a365d;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 50px;
+}
+
+.uma-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.uma-icon {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.uma-text p {
+    margin: 0 0 4px 0;
+    color: #1e293b;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.uma-titulo {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0a1929;
+}
+
+.uma-valor {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #1e40af;
+    background: #dbeafe;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* --- GRID DE TARJETAS --- */
+.reservas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* --- TARJETA INDIVIDUAL --- */
+.reserva-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.reserva-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.card-destacada {
+    border-color: #1a365d;
+    background: #ffffff;
+    position: relative;
+}
+
+.card-destacada::before {
+    content: "★ RECOMENDADA";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #1a365d;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    border-radius: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a1929;
+    margin: 0;
+}
+
+.card-duracion {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a365d;
+    background: #eef2ff;
+    padding: 4px 14px;
+    border-radius: 30px;
+}
+
+.card-precio {
+    margin: 12px 0 10px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.precio-uma {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a1929;
+}
+
+.precio-pesos {
+    font-size: 16px;
+    color: #64748b;
+}
+
+.card-descripcion {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.card-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.card-beneficios li {
+    font-size: 14px;
+    color: #334155;
+    padding: 4px 0;
+    line-height: 1.5;
+}
+
+/* --- BOTÓN DE RESERVA --- */
+.btn-reservar {
+    display: inline-block;
+    background: #1a365d;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 40px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.15s ease;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.btn-reservar:hover {
+    background: #2b4a7a;
+    transform: scale(1.02);
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* --- BLOQUE: PROCESO --- */
+.proceso-bloque {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.proceso-bloque h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a1929;
+    margin: 0 0 16px 0;
+}
+
+.proceso-lista {
+    padding-left: 22px;
+    margin: 0 0 16px 0;
+}
+
+.proceso-lista li {
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.8;
+}
+
+.proceso-aviso {
+    font-size: 14px;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 12px 0 0 0;
+}
+
+/* --- BLOQUE FAQ / WHATSAPP --- */
+.faq-bloque {
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 32px 36px;
+    text-align: center;
+    border: 1px dashed #94a3b8;
+}
+
+.faq-bloque h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0a1929;
+    margin: 0 0 8px 0;
+}
+
+.faq-bloque p {
+    font-size: 16px;
+    color: #475569;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.faq-aside-btn {
+    display: inline-block;
+    background: #25D366;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.faq-aside-btn:hover {
+    background: #1ebe5c;
+    transform: scale(1.03);
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 992px) {
+    .reservas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    .reservas-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .reservas-header h2 {
+        font-size: 28px;
+    }
+
+    .uma-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .card-destacada::before {
+        top: -8px;
+        right: 12px;
+        font-size: 9px;
+        padding: 3px 10px;
+    }
+
+    .proceso-bloque,
+    .faq-bloque {
+        padding: 24px 20px;
+    }
+
+    .btn-reservar {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+  /* --- Efecto hover para tarjetas de reservas --- */
+  #reservas .container > div:first-of-type > div > div {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  #reservas .container > div:first-of-type > div > div:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(22,22,18,0.08);
+  }
+  <style>
+  /* ... todo tu CSS existente ... */
+
+  /* ============================================
+     SECCIÓN DE RESERVAS
+     ============================================ */
+  .reservas-section { ... }
+  /* ... todo el CSS de reservas que ya tenés ... */
+
+  /* --- Efecto hover para tarjetas de reservas --- */
+  #reservas .container > div:first-of-type > div > div {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  #reservas .container > div:first-of-type > div > div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(22,22,18,0.10);
+  }
+
+  /* La tarjeta verde (recomendada) tiene sombra con tono oscuro */
+  #reservas .container > div:first-of-type > div > div[style*="background: var(--green)"]:hover {
+      box-shadow: 0 12px 32px rgba(26,92,66,0.25);
+  }
+
+</style>
+</head>
 </style>
 </head>
 <body>
@@ -424,11 +804,11 @@
       </h1>
       <p class="hero-sub fade-up fade-up-3">Te ayudamos a resolver el proceso sucesorio en CABA con claridad, acompañamiento y sin sorpresas. Sin vueltas, sin tecnicismos innecesarios.</p>
       <div class="hero-actions fade-up fade-up-4">
-        <a href="https://cal.com/juriscaba" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          Agendá tu consulta
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <a href="#reservas" class="btn-primary">
+        Agendá tu consulta
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M2 7h10M7 2l5 5-5 5"/>
-          </svg>
+        </svg>
         </a>
         <a href="#proceso" class="btn-ghost">¿Cuánto lleva una sucesión?</a>
       </div>
@@ -544,7 +924,7 @@
         <div class="faq-aside-card">
           <div class="faq-aside-title">¿No encontrás lo que buscás?</div>
           <div class="faq-aside-desc">Cada sucesión es única. Escribinos y te respondemos en menos de 24 horas con información específica para tu caso.</div>
-          <a href="https://wa.me/541161179711" class="faq-aside-btn">Hacer una consulta</a>
+          <a href="https://wa.me/541161179711" class="faq-aside-btn" style="background: #1A5C42 !important; color: #ffffff !important; text-align: center; padding: 12px 24px; border-radius: 100px !important; font-size: 13px; font-weight: 500; text-decoration: none; display: inline-block; transition: background 0.2s; border: none; cursor: pointer;" onmouseover="this.style.background='#0F2D1F'" onmouseout="this.style.background='#1A5C42'">Hacer una consulta</a>
         </div>
       </div>
       <div class="faq-list">
@@ -557,6 +937,147 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============================================
+     SECCIÓN DE RESERVAS (con tarjeta central verde)
+     ============================================ -->
+<section id="reservas" style="background: var(--sand); padding: 96px 5%;">
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+        <div class="section-tag">
+            <span class="section-tag-line"></span>RESERVAS
+        </div>
+        <h2 class="section-heading">Elegí el tipo de consulta</h2>
+        <p class="section-lead" style="max-width: 600px;">
+            Cada consulta es una sesión de trabajo con un abogado especialista en derecho sucesorio y patrimonial. Elegí el formato según la complejidad de tu situación.
+        </p>
+
+        <!-- BANNER UMA -->
+        <div style="margin: 40px 0 50px 0; padding: 18px 24px; background: var(--green-light); border-left: 4px solid var(--green); border-radius: var(--radius-sm);">
+            <p style="font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6;">
+                <strong style="color: var(--green);">Transparencia arancelaria:</strong>
+                Nuestros honorarios se calculan conforme a la <strong>Ley 27.423</strong>, tomando como referencia la <strong>Unidad de Medida Arancelaria (UMA)</strong>.
+            </p>
+        </div>
+
+        <!-- GRID DE TARJETAS (3 columnas) -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+            <!-- TARJETA 1: EXPRESS · 30min (BLANCA) -->
+            <div style="background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--ink);">Consulta Express</h3>
+                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: var(--green-light); padding: 3px 12px; border-radius: var(--radius-pill);">30 minutos</span>
+                </div>
+                <div style="margin: 8px 0 14px 0;">
+                    <span style="font-size: 22px; font-weight: 700; color: var(--ink);">0,5 UMA</span>
+                    <span style="font-size: 14px; color: var(--ink-soft); margin-left: 6px;">(≈ $50.000)</span>
+                </div>
+                <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px;">
+                    Ideal para resolver dudas puntuales y recibir orientación jurídica inicial.
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Videollamada o presencial
+                    </li>
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Orientación legal inicial
+                    </li>
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Próximos pasos concretos
+                    </li>
+                </ul>
+                <a href="https://cal.com/juriscaba/30m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--green); color: #fff; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
+            </div>
+
+            <!-- TARJETA 2: INTEGRAL · 60min (VERDE - RECOMENDADA) -->
+            <div style="background: var(--green); border-radius: var(--radius); padding: 32px 28px; border: none; transition: transform 0.2s ease, box-shadow 0.2s ease; position: relative; color: #fff;">
+
+                <!-- Label RECOMENDADA centrado -->
+                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fff; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 18px; border-radius: var(--radius-pill); box-shadow: 0 2px 8px rgba(0,0,0,0.10);">
+                    ★ RECOMENDADA
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: #fff;">Consulta Integral</h3>
+                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: rgba(255,255,255,0.20); padding: 3px 12px; border-radius: var(--radius-pill);">60 minutos</span>
+                </div>
+                <div style="margin: 8px 0 14px 0;">
+                    <span style="font-size: 22px; font-weight: 700; color: #fff;">1 UMA</span>
+                    <span style="font-size: 14px; color: rgba(255,255,255,0.70); margin-left: 6px;">(≈ $100.000)</span>
+                </div>
+                <p style="font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 18px;">
+                    Para un análisis completo. Revisamos documentación, evaluamos viabilidad y explicamos el procedimiento.
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
+                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: rgba(255,255,255,0.60);">✓</span> Análisis profundo del caso
+                    </li>
+                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: rgba(255,255,255,0.60);">✓</span> Revisión de documentación
+                    </li>
+                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: rgba(255,255,255,0.60);">✓</span> Evaluación de viabilidad
+                    </li>
+                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: rgba(255,255,255,0.60);">✓</span> Tiempos estimados
+                    </li>
+                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: rgba(255,255,255,0.60);">✓</span> Presupuesto cerrado de honorarios
+                    </li>
+                </ul>
+                <a href="https://cal.com/juriscaba/60m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: var(--green); padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
+            </div>
+
+            <!-- TARJETA 3: ESTRATÉGICA · 90min (BLANCA) -->
+            <div style="background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--ink);">Consulta Estratégica</h3>
+                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: var(--green-light); padding: 3px 12px; border-radius: var(--radius-pill);">90 minutos</span>
+                </div>
+                <div style="margin: 8px 0 14px 0;">
+                    <span style="font-size: 22px; font-weight: 700; color: var(--ink);">1,5 UMA</span>
+                    <span style="font-size: 14px; color: var(--ink-soft); margin-left: 6px;">(≈ $150.000)</span>
+                </div>
+                <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px;">
+                    Para situaciones complejas: conflictos con herederos, bienes en distintas jurisdicciones, sucesiones internacionales.
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Todo lo anterior, con mayor profundidad
+                    </li>
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Análisis de riesgos y conflictos
+                    </li>
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Estrategia jurídica personalizada
+                    </li>
+                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--green);">✓</span> Plan de acción detallado paso a paso
+                    </li>
+                </ul>
+                <a href="https://cal.com/juriscaba/90m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--green); color: #fff; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
+            </div>
+
+        </div><!-- /grid -->
+
+        <!-- BLOQUE: PROCESO DE PAGO -->
+        <div style="margin-top: 50px; padding: 28px 32px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line-dark);">
+            <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: var(--ink);">¿Cómo funciona el proceso?</h4>
+            <ol style="padding-left: 20px; margin: 0 0 14px 0; font-size: 14px; color: var(--ink-soft); line-height: 1.8;">
+                <li><strong>Reservá tu turno</strong> completando el formulario.</li>
+                <li><strong>Recibí un correo</strong> con la confirmación.</li>
+                <li><strong>Te contactamos por WhatsApp</strong> en menos de 24h.</li>
+                <li><strong>Aboná</strong> y tu consulta queda confirmada.</li>
+            </ol>
+            <p style="font-size: 13px; color: var(--ink-muted); margin: 0; background: var(--sand); padding: 10px 16px; border-radius: var(--radius-sm);">
+                ⚠️ La reserva tiene validez por <strong>24 horas</strong>. Si no recibimos el pago, el turno se libera. ¿Necesitás más tiempo? Avisanos y lo extendemos sin costo.
+            </p>
+        </div>
+
+        </div><!-- /container -->
 </section>
 
 <section id="contacto">
@@ -586,7 +1107,7 @@
         </div>
       </div>
       <div class="contact-form">
-        <div class="form-title">Consulta sin cargo</div>
+        <div class="form-title">Enviá tu mensaje</div>
         <div class="form-subtitle">Completá el formulario o reservá tu consulta online. Nos pondremos en contacto con vos a la brevedad.</div>
         <form id="contact-form" action="https://formspree.io/f/mlgokeoj" method="POST" onsubmit="handleSubmit(event)">
           <input type="hidden" name="_replyto" value="juriscaba@gmail.com" />
