@@ -639,102 +639,361 @@
     margin: 0 auto 20px auto;
 }
 
-.faq-aside-btn {
-    display: inline-block;
-    background: #25D366;
-    color: #ffffff !important;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 14px 32px;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background 0.25s ease, transform 0.15s ease;
-}
+/* ============================================
+   RESPONSIVE: RESERVAS - ANCHO COMPLETO EN MÓVIL
+   ============================================ */
 
-.faq-aside-btn:hover {
-    background: #1ebe5c;
-    transform: scale(1.03);
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-/* --- RESPONSIVE (MÓVIL) --- */
-@media (max-width: 992px) {
-    .reservas-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* --- Tablets (hasta 1024px) --- */
+@media (max-width: 1024px) {
+    #reservas .container > div:first-of-type {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
     }
 }
 
-@media (max-width: 680px) {
-    .reservas-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+/* --- Móviles (hasta 768px) --- */
+@media (max-width: 768px) {
+    /* FORZAR 1 COLUMNA Y ANCHO COMPLETO */
+    #reservas .container > div:first-of-type {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    .reservas-header h2 {
-        font-size: 28px;
+    /* Cada tarjeta ocupa el 100% del ancho */
+    #reservas .container > div:first-of-type > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 24px 18px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
     }
 
-    .uma-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
+    /* Tarjeta verde (recomendada) */
+    #reservas .container > div:first-of-type > div > div[style*="background: var(--green)"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 28px 18px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
     }
 
-    .card-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
+    /* Label RECOMENDADA */
+    #reservas .container > div:first-of-type > div > div[style*="position: relative;"] > div:first-child {
+        font-size: 9px !important;
+        padding: 3px 12px !important;
+        top: -10px !important;
+        white-space: nowrap !important;
     }
 
-    .card-destacada::before {
-        top: -8px;
-        right: 12px;
-        font-size: 9px;
-        padding: 3px 10px;
+    /* Badge de duración */
+    #reservas .container > div:first-of-type > div .card-duracion,
+    #reservas .container > div:first-of-type > div span[style*="background: var(--green-light)"] {
+        font-size: 11px !important;
+        padding: 2px 10px !important;
     }
 
-    .proceso-bloque,
-    .faq-bloque {
-        padding: 24px 20px;
+    /* Botones a ancho completo */
+    #reservas .container > div:first-of-type > div a[href*="cal.com"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+        display: block !important;
     }
 
-    .btn-reservar {
-        align-self: stretch;
-        text-align: center;
+    /* Títulos */
+    #reservas h2 {
+        font-size: 26px !important;
+    }
+
+    #reservas .container > div:first-of-type > div h3 {
+        font-size: 17px !important;
+    }
+
+    /* Precio UMA */
+    #reservas .container > div:first-of-type > div .precio-uma {
+        font-size: 20px !important;
+    }
+
+    /* Descripciones */
+    #reservas .container > div:first-of-type > div p {
+        font-size: 14px !important;
+    }
+
+    /* Beneficios */
+    #reservas .container > div:first-of-type > div ul li {
+        font-size: 13px !important;
+        padding: 4px 0 !important;
+    }
+
+    /* Contenedor de las tarjetas */
+    #reservas .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* Padding de la sección */
+    #reservas {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 }
-  /* --- Efecto hover para tarjetas de reservas --- */
-  #reservas .container > div:first-of-type > div > div {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  #reservas .container > div:first-of-type > div > div:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(22,22,18,0.08);
-  }
-  <style>
-  /* ... todo tu CSS existente ... */
 
-  /* ============================================
-     SECCIÓN DE RESERVAS
-     ============================================ */
-  .reservas-section { ... }
-  /* ... todo el CSS de reservas que ya tenés ... */
+/* --- Móviles muy pequeños (hasta 480px) --- */
+@media (max-width: 480px) {
+    #reservas {
+        padding: 40px 12px !important;
+    }
 
-  /* --- Efecto hover para tarjetas de reservas --- */
-  #reservas .container > div:first-of-type > div > div {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  #reservas .container > div:first-of-type > div > div:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 32px rgba(22,22,18,0.10);
-  }
+    #reservas h2 {
+        font-size: 22px !important;
+    }
 
-  /* La tarjeta verde (recomendada) tiene sombra con tono oscuro */
-  #reservas .container > div:first-of-type > div > div[style*="background: var(--green)"]:hover {
-      box-shadow: 0 12px 32px rgba(26,92,66,0.25);
-  }
+    #reservas .container > div:first-of-type > div {
+        padding: 20px 14px !important;
+    }
 
+    #reservas .container > div:first-of-type > div .precio-uma {
+        font-size: 18px !important;
+    }
+
+    #reservas .container > div:first-of-type > div p {
+        font-size: 13px !important;
+    }
+
+    #reservas .container > div:first-of-type > div ul li {
+        font-size: 12px !important;
+        padding: 3px 0 !important;
+    }
+
+    .uma-banner {
+        padding: 14px 16px !important;
+        margin: 20px 0 28px 0 !important;
+    }
+
+    .uma-banner p {
+        font-size: 12px !important;
+    }
+}
+
+/* ============================================
+   ELIMINAR SCROLL HORIZONTAL
+   ============================================ */
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+* {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.nav-hamburger {
+    flex-shrink: 0 !important;
+}
+
+nav {
+    padding-right: 5% !important;
+    padding-left: 5% !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+.container, 
+.hero-inner,
+.footer-main,
+.footer-bottom {
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+img, svg, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+#mobile-menu {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+/* --- Ajustar el aside de FAQ en móvil --- */
+@media (max-width: 900px) {
+    .faq-inner {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .faq-aside {
+        position: static !important;
+    }
+}
+
+/* --- Ajustar el proceso en móvil --- */
+@media (max-width: 900px) {
+    .proceso-inner {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .proceso-aside {
+        position: static !important;
+    }
+}
+
+/* --- Ajustar el padding de la tarjeta de FAQ en móvil --- */
+@media (max-width: 600px) {
+    .faq-aside-card {
+        padding: 20px 16px !important;
+    }
+}
+
+/* --- Asegurar que el botón "Hacer una consulta" se vea bien en móvil --- */
+@media (max-width: 600px) {
+    .faq-aside-btn {
+        font-size: 14px !important;
+        padding: 12px 20px !important;
+        width: 100% !important;
+    }
+}
+/* ============================================
+   FORZAR GRID DE RESERVAS A 1 COLUMNA EN MÓVIL
+   ============================================ */
+
+/* --- Tablets (hasta 1024px) --- */
+@media (max-width: 1024px) {
+    .reservas-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* --- Móviles (hasta 768px) --- */
+@media (max-width: 768px) {
+    .reservas-grid-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    /* Cada tarjeta ocupa el 100% */
+    .reservas-grid-container > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Botones a ancho completo */
+    .reservas-grid-container a[href*="cal.com"] {
+        width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        padding: 12px 16px !important;
+        display: block !important;
+    }
+
+    /* Tarjeta verde (recomendada) */
+    .reservas-grid-container > div > div[style*="background: var(--green)"] {
+        width: 100% !important;
+        padding: 28px 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Label RECOMENDADA más chico */
+    .reservas-grid-container > div > div[style*="position: relative;"] > div:first-child {
+        font-size: 9px !important;
+        padding: 3px 12px !important;
+        top: -10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Badge de duración */
+    .reservas-grid-container .card-duracion,
+    .reservas-grid-container span[style*="background: var(--green-light)"] {
+        font-size: 11px !important;
+        padding: 2px 10px !important;
+    }
+
+    /* Ajustar títulos */
+    #reservas h2 {
+        font-size: 26px !important;
+    }
+
+    .reservas-grid-container h3 {
+        font-size: 17px !important;
+    }
+
+    /* Precio UMA */
+    .reservas-grid-container .precio-uma {
+        font-size: 20px !important;
+    }
+
+    /* Descripciones */
+    .reservas-grid-container p {
+        font-size: 14px !important;
+    }
+
+    /* Beneficios */
+    .reservas-grid-container ul li {
+        font-size: 13px !important;
+        padding: 4px 0 !important;
+    }
+
+    /* Padding de la sección */
+    #reservas {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+/* --- Móviles muy pequeños (hasta 480px) --- */
+@media (max-width: 480px) {
+    #reservas {
+        padding: 40px 12px !important;
+    }
+
+    #reservas h2 {
+        font-size: 22px !important;
+    }
+
+    .reservas-grid-container > div {
+        padding: 20px 14px !important;
+    }
+
+    .reservas-grid-container .precio-uma {
+        font-size: 18px !important;
+    }
+
+    .reservas-grid-container p {
+        font-size: 13px !important;
+    }
+
+    .reservas-grid-container ul li {
+        font-size: 12px !important;
+        padding: 3px 0 !important;
+    }
+
+    .uma-banner {
+        padding: 14px 16px !important;
+        margin: 20px 0 28px 0 !important;
+    }
+
+    .uma-banner p {
+        font-size: 12px !important;
+    }
+}
 </style>
 </head>
 </style>
@@ -777,7 +1036,9 @@
     <li><a href="#faq">FAQ</a></li>
     <li><a href="https://cal.com/juriscaba" target="_blank" class="nav-cta">Reservar</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+  <div class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Abrir menú" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+</div>
 </nav>
 
 <div id="mobile-menu" style="display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line-dark);z-index:99;padding:20px 5%;">
@@ -924,7 +1185,7 @@
         <div class="faq-aside-card">
           <div class="faq-aside-title">¿No encontrás lo que buscás?</div>
           <div class="faq-aside-desc">Cada sucesión es única. Escribinos y te respondemos en menos de 24 horas con información específica para tu caso.</div>
-          <a href="https://wa.me/541161179711" class="faq-aside-btn" style="background: #1A5C42 !important; color: #ffffff !important; text-align: center; padding: 12px 24px; border-radius: 100px !important; font-size: 13px; font-weight: 500; text-decoration: none; display: inline-block; transition: background 0.2s; border: none; cursor: pointer;" onmouseover="this.style.background='#0F2D1F'" onmouseout="this.style.background='#1A5C42'">Hacer una consulta</a>
+          <a href="https://wa.me/541161179711" class="faq-aside-btn" style="background: #1A5C42 !important; color: #ffffff !important; text-align: center; padding: 12px 24px; border-radius: 100px !important; font-size: 13px; font-weight: 500; text-decoration: none; display: inline-block; transition: background 0.2s; border: none; cursor: pointer; width: auto;" onmouseover="this.style.background='#0F2D1F'" onmouseout="this.style.background='#1A5C42'">Hacer una consulta</a>
         </div>
       </div>
       <div class="faq-list">
@@ -963,7 +1224,7 @@
         </div>
 
         <!-- GRID DE TARJETAS (3 columnas) -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div class="reservas-grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
 
             <!-- TARJETA 1: EXPRESS · 30min (BLANCA) -->
             <div style="background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s ease, box-shadow 0.2s ease;">
@@ -1077,8 +1338,8 @@
             </p>
         </div>
 
-        </div><!-- /container -->
-</section>
+            </div><!-- /container -->
+</section> 
 
 <section id="contacto">
   <div class="container">
