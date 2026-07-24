@@ -257,26 +257,43 @@
   .form-note { font-size: 11px; color: var(--ink-muted); text-align: center; margin-top: 12px; }
 
   /* ═ FOOTER ══ */
- footer { background: #080f0b; padding: 0; }
-  .footer-main { max-width: 1200px; margin: 0 auto; padding: 42px 5% 36px; display: grid; grid-template-columns: 220px 1fr; gap: 50px; align-items: start; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .footer-brand-logo { display: flex; align-items: center; margin-bottom: 14px; text-decoration: none; }
-  .footer-brand-desc { font-size: 12px; color: rgba(255,255,255,0.28); line-height: 1.7; max-width: 180px; font-weight: 300; }
-  .footer-nav-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .footer-col-title { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
-  .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .footer-col-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; letter-spacing: 0.01em; }
-  .footer-col-links a:hover { color: rgba(255,255,255,0.82); }
-  .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 16px 5%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-  .footer-bottom-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-  .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 0.02em; }
-  .footer-legal-links { display: flex; gap: 20px; list-style: none; }
-  .footer-legal-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
-  .footer-legal-links a:hover { color: rgba(255,255,255,0.5); }
-  .footer-social { display: flex; align-items: center; gap: 10px; }
-  .footer-social-link { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
-  .footer-social-link:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.06); }
-  .footer-social-link svg { width: 14px; height: 14px; fill: rgba(255,255,255,0.38); transition: fill 0.2s; }
-  .footer-social-link:hover svg { fill: rgba(255,255,255,0.8); }
+footer {
+  background: #080f0b;
+  padding: 0;
+  margin-top: -20px; /* opcional si queda mucho aire arriba */
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 34px 5% 28px;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 56px;
+  align-items: start;
+  border-top: 1px solid rgba(255,255,255,.06);   /* usa la línea como separación */
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.footer-nav-cols {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 26px;
+}
+
+.footer-col-title {
+  margin-bottom: 10px;
+}
+
+.footer-col-links {
+  gap: 7px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 5%;
+}
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   .fade-up { animation: fadeUp 0.7s ease both; }
