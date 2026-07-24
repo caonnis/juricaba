@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicios Jurídicos | Juris CABA - Abogados de Sucesiones</title>
+<meta name="description" content="Servicios legales especializados en sucesiones: inicio de sucesión, destrabe de expedientes, acuerdos entre herederos, bienes inmuebles, testamentos y asesoramiento preventivo en CABA.">
+<link rel="canonical" href="https://www.juriscaba.com/servicios" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #1A5C42; --green-dark: #1A5C42; --green-mid: #1D6B4F; --green-light: #E8F5EF; --green-pale: #F2FAF6;
+    --sand: #F7F4EF; --sand-mid: #EDE8DF; --ink: #161612; --ink-mid: #3A3A35;
+    --ink-soft: #6B6860; --ink-muted: #9E9B95; --white: #FFFFFF;
+    --line: rgba(26,92,66,0.12); --line-dark: rgba(22,22,18,0.1);
+    --serif: 'DM Serif Display', Georgia, serif; --sans: 'DM Sans', system-ui, sans-serif;
+    --radius: 12px; --radius-sm: 8px; --radius-pill: 100px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--ink); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line-dark); }
+  .nav-logo { display: inline-flex; align-items: center; text-decoration: none; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { font-size: 13px; font-weight: 400; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta { background: var(--green); color: #fff !important; padding: 8px 18px; border-radius: var(--radius-pill); font-size: 13px !important; font-weight: 500 !important; }
+  .nav-cta:hover { background: var(--ink) !important; }
+  .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); border-radius: 2px; }
+
+  .page-header { padding: 140px 5% 80px; background: var(--green-dark); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+  .section-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+  .section-tag-line { width: 24px; height: 1px; background: rgba(255,255,255,0.3); }
+  .page-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); line-height: 1.15; color: var(--white); margin-bottom: 20px; }
+  .page-lead { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 650px; }
+
+  section { padding: 96px 5%; }
+  .section-heading { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 42px); line-height: 1.15; color: var(--ink); margin-bottom: 16px; }
+  .section-lead { font-size: 16px; color: var(--ink-soft); line-height: 1.7; max-width: 580px; margin-bottom: 56px; }
+
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .service-card { background: var(--white); border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--line-dark); transition: transform 0.2s, box-shadow 0.2s; }
+  .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(22,22,18,0.07); }
+  .serv-tag { display: inline-block; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: var(--radius-pill); margin-bottom: 16px; }
+  .service-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+  .service-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 16px; }
+  .service-card ul { list-style: none; padding: 0; margin: 0; }
+  .service-card li { font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+  .service-card li::before { content: '✓'; color: var(--green); font-weight: 600; }
+
+  .cta-section { background: var(--green); border-radius: var(--radius); padding: 48px 40px; text-align: center; margin-top: 60px; }
+  .cta-section h2 { font-family: var(--serif); font-size: 28px; color: var(--white); margin-bottom: 12px; }
+  .cta-section p { color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 24px; }
+  .btn-white { display: inline-block; background: var(--white); color: var(--green); padding: 14px 28px; border-radius: var(--radius-pill); font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+  .btn-white:hover { background: var(--green-light); }
+
+  footer { background: #080f0b; padding: 40px 5%; text-align: center; }
+  footer p { color: rgba(255,255,255,0.3); font-size: 12px; }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 72px 5%; }
+    .services-grid { grid-template-columns: 1fr; }
+    .cta-section { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <svg height="26" viewBox="0 0 240 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text font-family="'DM Sans', system-ui, sans-serif" font-size="20" y="25" x="120" text-anchor="middle">
+        <tspan font-weight="700" letter-spacing="5" fill="#1A5C42">JURIS</tspan><tspan font-weight="600" letter-spacing="3" fill="#9E9B95" dx="6">CABA</tspan>
+      </text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+  <li><a href="../sucesiones-caba/index.html">Sucesiones</a></li>
+  <li><a href="../servicios/index.html">Servicios</a></li>
+  <li><a href="../como-trabajamos/index.html">Cómo trabajamos</a></li>
+  <li><a href="../preguntas-frecuentes/index.html">FAQ</a></li>
+  <li><a href="../index.html#contacto">Contacto</a></li>
+  <li><a href="https://cal.com/juriscaba" target="_blank" class="nav-cta">Reservar</a></li>
+</ul>
+  <div class="nav-hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-tag"><span class="section-tag-line"></span>Servicios</div>
+    <h1 class="page-title">¿En qué podemos ayudarte?</h1>
+    <p class="page-lead">Manejamos todo tipo de sucesiones, desde las más simples hasta los casos más complejos con múltiples herederos y bienes. Cada servicio está diseñado para resolver tu situación de forma integral.</p>
+  </div>
+</div>
+
+<section style="background: var(--sand);">
+  <div class="container">
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="serv-tag">Inicio</div>
+        <h3>Inicio de sucesión</h3>
+        <p>Presentación completa del expediente sucesorio ante los juzgados de CABA o escribanía, según corresponda.</p>
+        <ul>
+          <li>Declaratoria de herederos</li>
+          <li>Publicación de edictos</li>
+          <li>Identificación de bienes</li>
+          <li>Gestión documental completa</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="serv-tag">Destrabe</div>
+        <h3>Sucesiones trabadas</h3>
+        <p>Expedientes que llevan años sin moverse. Diagnosticamos la traba y presentamos los escritos necesarios para reactivar.</p>
+        <ul>
+          <li>Revisión del estado del expediente</li>
+          <li>Identificación de obstáculos</li>
+          <li>Presentación de escritos</li>
+          <li>Seguimiento hasta el cierre</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="serv-tag">Familia</div>
+        <h3>Acuerdo entre herederos</h3>
+        <p>Mediamos para llegar a un acuerdo extrajudicial cuando hay desacuerdos sobre la distribución de bienes.</p>
+        <ul>
+          <li>Mediación entre partes</li>
+          <li>Redacción de acuerdos</li>
+          <li>Evitar litigios costosos</li>
+          <li>Homologación judicial si aplica</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="serv-tag">Inmuebles</div>
+        <h3>Bienes inmuebles</h3>
+        <p>Transferencia de propiedades, regularización de dominio y coordinación con el Registro de la Propiedad Inmueble.</p>
+        <ul>
+          <li>Inscripción de declaratoria</li>
+          <li>Transferencia de dominio</li>
+          <li>Coordinación con escribanos</li>
+          <li>Resolución de gravámenes</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="serv-tag">Testamento</div>
+        <h3>Sucesión con testamento</h3>
+        <p>Tramitamos la apertura y protocolización del testamento, velando por su correcta ejecución y respeto a la legítima.</p>
+        <ul>
+          <li>Apertura de testamento</li>
+          <li>Protocolización notarial</li>
+          <li>Verificación de validez</li>
+          <li>Designación de albacea</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="serv-tag">Planificación</div>
+        <h3>Asesoramiento preventivo</h3>
+        <p>¿Querés evitarles problemas a tus herederos? Te ayudamos a planificar con tiempo para cuando sea necesario.</p>
+        <ul>
+          <li>Redacción de testamento</li>
+          <li>Planificación patrimonial</li>
+          <li>Donaciones en vida</li>
+          <li>Estrategias fiscales</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="cta-section">
+      <h2>¿No sabés qué servicio necesitás?</h2>
+      <p>Contanos tu situación y te orientamos sobre el mejor camino a seguir.</p>
+      <a href="../index.html#contacto" class="btn-white">Consultar por mi caso →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Juris CABA · Todos los derechos reservados</p>
+</footer>
+
+<script>
+window.toggleMobileMenu = function() {
+  var m = document.getElementById('mobile-menu');
+  if (!m) return;
+  m.style.display = (m.style.display === 'none' || m.style.display === '') ? 'block' : 'none';
+};
+</script>
+
+</body>
+</html>

@@ -1,9 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/sucesiones-caba", "destination": "/sucesiones-caba/index.html" },
+    { "source": "/declaratoria-herederos", "destination": "/declaratoria-herederos/index.html" },
+    { "source": "/herencias", "destination": "/herencias/index.html" },
+    { "source": "/sucesiones-complejas", "destination": "/sucesiones-complejas/index.html" },
+    { "source": "/servicios", "destination": "/servicios/index.html" },
+    { "source": "/como-trabajamos", "destination": "/como-trabajamos/index.html" },
+    { "source": "/preguntas-frecuentes", "destination": "/preguntas-frecuentes/index.html" },
+    { "source": "/contacto", "destination": "/contacto/index.html" }
   ]
 }
