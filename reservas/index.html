@@ -3,13 +3,36 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Herencias y Derechos Sucesorios | Juris CABA</title>
-<meta name="description" content="Asesoramiento integral en herencias. Conocé tus derechos como heredero, la legítima, porción disponible y cómo proteger tu patrimonio. Evaluación especializada en CABA.">
-<link rel="canonical" href="https://www.juriscaba.com/herencias" />
+<title>Reservar Consulta | Juris CABA - Abogados de Sucesiones</title>
+<meta name="description" content="Reservá tu consulta jurídica con especialistas en sucesiones en CABA. Consultas Express, Integrales y Estratégicas. Honorarios transparentes según Ley 27.423 y UMA.">
+<link rel="canonical" href="https://www.juriscaba.com/reservas" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+<!-- Breadcrumb JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.juriscaba.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Reservar Consulta",
+      "item": "https://www.juriscaba.com/reservas/"
+    }
+  ]
+}
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -47,37 +70,54 @@
   .section-heading { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 42px); line-height: 1.15; color: var(--ink); margin-bottom: 16px; }
   .section-lead { font-size: 16px; color: var(--ink-soft); line-height: 1.7; max-width: 580px; margin-bottom: 40px; }
 
-  /* CAJAS VERDES */
-  .green-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
-  .green-card { background: var(--green); border-radius: var(--radius); padding: 32px 28px; color: var(--white); transition: transform 0.2s, box-shadow 0.2s; }
-  .green-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,92,66,0.25); }
-  .green-card-icon { font-size: 32px; margin-bottom: 16px; display: block; }
-  .green-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--white); }
-  .green-card p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; margin: 0; }
+  /* TARJETAS DE CONSULTA */
+  .consultas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 50px; }
+  .consulta-card { background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+  .consulta-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(22,22,18,0.07); }
+  .consulta-card.destacada { background: var(--green); border: none; color: var(--white); position: relative; }
+  .consulta-card.destacada::before { content: "★ RECOMENDADA"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--white); color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 4px 18px; border-radius: var(--radius-pill); box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+  .consulta-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .consulta-card h3 { font-size: 18px; font-weight: 600; margin: 0; color: var(--ink); }
+  .consulta-card.destacada h3 { color: var(--white); }
+  .consulta-duracion { font-size: 13px; font-weight: 500; color: var(--green); background: var(--green-light); padding: 3px 12px; border-radius: var(--radius-pill); }
+  .consulta-card.destacada .consulta-duracion { color: var(--green); background: rgba(255,255,255,0.20); }
+  .consulta-precio { margin: 12px 0 14px 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .precio-uma { font-size: 22px; font-weight: 700; color: var(--ink); }
+  .consulta-card.destacada .precio-uma { color: var(--white); }
+  .precio-pesos { font-size: 14px; color: var(--ink-soft); }
+  .consulta-card.destacada .precio-pesos { color: rgba(255,255,255,0.70); }
+  .consulta-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px; flex-grow: 1; }
+  .consulta-card.destacada .consulta-desc { color: rgba(255,255,255,0.85); }
+  .consulta-beneficios { list-style: none; padding: 0; margin: 0 0 24px 0; }
+  .consulta-beneficios li { font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+  .consulta-card.destacada .consulta-beneficios li { color: rgba(255,255,255,0.85); }
+  .consulta-beneficios li::before { content: '✓'; color: var(--green); font-weight: 600; flex-shrink: 0; }
+  .consulta-card.destacada .consulta-beneficios li::before { color: rgba(255,255,255,0.60); }
+  .btn-reservar { display: inline-block; background: var(--green); color: #fff; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.15s; text-align: center; width: 100%; box-sizing: border-box; margin-top: auto; }
+  .btn-reservar:hover { background: var(--ink); transform: translateY(-1px); }
+  .consulta-card.destacada .btn-reservar { background: var(--white); color: var(--green); }
+  .consulta-card.destacada .btn-reservar:hover { background: var(--green-light); }
 
-  /* LISTA BLANCA CON BORDE VERDE */
-  .types-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
-  .type-item { background: var(--white); border-radius: var(--radius); padding: 28px 24px; border: 1px solid var(--line-dark); border-left: 4px solid var(--green); transition: transform 0.2s, box-shadow 0.2s; }
-  .type-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(22,22,18,0.07); }
-  .type-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--green); }
-  .type-item p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin: 0; }
+  /* INFO UMA */
+  .uma-banner { background: var(--green-light); border-left: 4px solid var(--green); border-radius: var(--radius-sm); padding: 18px 24px; margin: 40px 0 50px 0; }
+  .uma-banner p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+  .uma-banner strong { color: var(--green); }
 
-  /* CAJAS VERDE OSCURO */
-  .dark-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
-  .dark-card { background: var(--green-dark); border-radius: var(--radius); padding: 32px 28px; color: var(--white); border: 1px solid rgba(255,255,255,0.08); transition: transform 0.2s, box-shadow 0.2s; }
-  .dark-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,92,66,0.25); border-color: rgba(255,255,255,0.2); }
-  .dark-card-icon { font-size: 32px; margin-bottom: 16px; display: block; }
-  .dark-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--white); }
-  .dark-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0; }
+  /* PROCESO DE RESERVA */
+  .proceso-box { background: var(--white); border-radius: var(--radius); padding: 32px 36px; margin-top: 60px; border: 1px solid var(--line-dark); }
+  .proceso-box h4 { font-size: 18px; font-weight: 600; margin: 0 0 16px 0; color: var(--ink); }
+  .proceso-lista { padding-left: 22px; margin: 0 0 16px 0; }
+  .proceso-lista li { font-size: 14px; color: var(--ink-soft); line-height: 1.8; }
+  .proceso-aviso { font-size: 13px; color: var(--ink-muted); background: var(--sand); padding: 12px 18px; border-radius: var(--radius-sm); margin: 16px 0 0 0; }
 
-  /* CTA */
+  /* CTA FINAL */
   .cta-box { background: var(--green); border-radius: var(--radius); padding: 48px 40px; text-align: center; margin-top: 60px; }
   .cta-box h2 { font-family: var(--serif); font-size: 28px; color: var(--white); margin-bottom: 12px; }
   .cta-box p { color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 24px; }
   .btn-white { display: inline-block; background: var(--white); color: var(--green); padding: 14px 28px; border-radius: var(--radius-pill); font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
   .btn-white:hover { background: var(--green-light); }
 
-  /* ═ FOOTER PROFESIONAL CENTRADO ═ */
+  /* FOOTER */
   footer { background: #080f0b; padding: 0; }
   .footer-main { max-width: 1100px !important; margin: 0 auto !important; padding: 64px 5% 52px !important; display: grid !important; grid-template-columns: 220px 1fr !important; gap: 80px !important; align-items: start !important; border-bottom: 1px solid rgba(255,255,255,0.07) !important; overflow: visible !important; }
   .footer-brand-logo { display: flex; align-items: center; margin-bottom: 14px; text-decoration: none; }
@@ -102,7 +142,7 @@
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
-    .green-cards, .types-list, .dark-cards { grid-template-columns: 1fr; }
+    .consultas-grid { grid-template-columns: 1fr; }
     .footer-main { grid-template-columns: 1fr !important; gap: 40px !important; padding: 48px 5% 40px !important; text-align: center !important; }
     .footer-brand { display: flex !important; flex-direction: column !important; align-items: center !important; }
     .footer-brand-logo { justify-content: center !important; }
@@ -113,6 +153,7 @@
   @media (max-width: 600px) {
     section { padding: 72px 5%; }
     .cta-box { padding: 36px 24px; }
+    .proceso-box { padding: 24px 20px; }
     .footer-main { padding: 40px 5% 32px !important; }
     .footer-nav-cols { grid-template-columns: 1fr !important; gap: 20px !important; }
     .footer-bottom { flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 16px !important; padding: 20px 5% !important; text-align: center !important; }
@@ -121,26 +162,6 @@
     .footer-social { justify-content: center !important; }
   }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://www.juriscaba.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Herencias y Derechos",
-      "item": "https://www.juriscaba.com/herencias/"
-    }
-  ]
-}
-</script>
 </head>
 <body>
 
@@ -178,103 +199,114 @@
   </ul>
 </div>
 
-<!-- HEADER VERDE OSCURO -->
+<!-- HEADER -->
 <div class="page-header">
   <div class="container">
-    <div class="section-tag"><span class="section-tag-line"></span>Derecho Sucesorio</div>
-    <h1 class="page-title">Herencias y Derechos Hereditarios</h1>
-    <p class="page-lead">Conocé tus derechos como heredero, cómo se distribuye el patrimonio y qué podés hacer para proteger tu porción legítima. Asesoramiento especializado en CABA.</p>
+    <div class="section-tag"><span class="section-tag-line"></span>Consultas Profesionales</div>
+    <h1 class="page-title">Reservá tu consulta</h1>
+    <p class="page-lead">Elegí el formato de consulta según la complejidad de tu situación. Todas las sesiones son con un abogado especialista en derecho sucesorio y patrimonial.</p>
   </div>
 </div>
 
-<!-- SECCIÓN: ¿QUÉ ES? CON CAJAS VERDES -->
-<section style="background: var(--white);">
-  <div class="container">
-    <div class="section-tag" style="color: var(--green);"><span class="section-tag-line" style="background: var(--green);"></span>Conceptos básicos</div>
-    <h2 class="section-heading">¿Qué es una herencia?</h2>
-    <p class="section-lead">La herencia es el conjunto de bienes, derechos y obligaciones que se transmiten de una persona fallecida (causante) a sus herederos. Incluye propiedades, dinero e inversiones, pero también deudas.</p>
-
-    <div class="green-cards">
-      <div class="green-card">
-        <span class="green-card-icon"></span>
-        <h3>Aceptación y renuncia</h3>
-        <p>Nadie está obligado a aceptar una herencia. Si las deudas superan los bienes, podés renunciar para no responder con tu propio patrimonio.</p>
-      </div>
-      <div class="green-card">
-        <span class="green-card-icon"></span>
-        <h3>El patrimonio hereditario</h3>
-        <p>Se forma con todos los bienes del causante al momento de su fallecimiento, más las donaciones realizadas en vida que deban colacionarse.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN: LEGÍTIMA Y DISPONIBLE CON CAJAS BLANCAS -->
+<!-- SECCIÓN DE CONSULTAS -->
 <section style="background: var(--sand);">
   <div class="container">
-    <div class="section-tag" style="color: var(--green);"><span class="section-tag-line" style="background: var(--green);"></span>Distribución</div>
-    <h2 class="section-heading">La legítima y la porción disponible</h2>
-    <p class="section-lead">La ley argentina reserva una parte del patrimonio para los herederos forzosos (legítima) y permite disponer libremente del resto.</p>
+    <div class="section-tag" style="color: var(--green);"><span class="section-tag-line" style="background: var(--green);"></span>Tipos de consulta</div>
+    <h2 class="section-heading">Elegí el formato adecuado</h2>
+    <p class="section-lead">Cada consulta es una sesión de trabajo profesional. Elegí según la complejidad de tu caso y el nivel de profundidad que necesites.</p>
 
-    <div class="types-list">
-      <div class="type-item">
-        <h3>Si hay hijos</h3>
-        <p><strong>2/3 del patrimonio</strong> es legítima (se divide entre todos los hijos). El tercio restante es de libre disposición.</p>
-      </div>
-      <div class="type-item">
-        <h3>Si no hay hijos</h3>
-        <p><strong>1/2 del patrimonio</strong> es legítima para los ascendientes (padres/abuelos). La otra mitad es de libre disposición.</p>
-      </div>
-      <div class="type-item">
-        <h3>Porción disponible</h3>
-        <p>Es la parte de la que el causante puede disponer libremente mediante testamento: puede dejarla a un heredero, a un amigo o a una institución.</p>
-      </div>
-      <div class="type-item">
-        <h3>Porción conyugal</h3>
-        <p>El cónyuge no es heredero forzoso en la misma línea, pero tiene derecho a la adjudicación del hogar conyugal y a una porción sobre los bienes gananciales.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN: QUÉ PASA SI ME OMITIERON CON CAJAS VERDE OSCURO -->
-<section style="background: var(--white);">
-  <div class="container">
-    <div class="section-tag" style="color: var(--green);"><span class="section-tag-line" style="background: var(--green);"></span>Protección legal</div>
-    <h2 class="section-heading">¿Qué pasa si me omitieron?</h2>
-    <p class="section-lead">Si sos heredero forzoso y no fuiste incluido en el testamento o en la sucesión, la ley te protege y te da herramientas para reclamar.</p>
-
-    <div class="dark-cards">
-      <div class="dark-card">
-        <span class="dark-card-icon"></span>
-        <h3>Impugnar el testamento</h3>
-        <p>Si el testamento afecta tu legítima, podés solicitar su nulidad total o parcial ante un juez para que se respete tu porción.</p>
-      </div>
-      <div class="dark-card">
-        <span class="dark-card-icon"></span>
-        <h3>Reclamar tu legítima</h3>
-        <p>Tenés derecho a iniciar las acciones legales necesarias para que se te reconozca y entregue la parte que te corresponde por ley.</p>
-      </div>
-      <div class="dark-card">
-        <span class="dark-card-icon"></span>
-        <h3>Acción de colación</h3>
-        <p>Si el causante hizo donaciones en vida a otros herederos que perjudican tu parte, podés pedir que se sumen al patrimonio para recalcular las porciones.</p>
-      </div>
-      <div class="dark-card">
-        <span class="dark-card-icon"></span>
-        <h3>Plazos de prescripción</h3>
-        <p>Es fundamental actuar rápido. Hay plazos legales que, si se vencen, pueden extinguir tu derecho a reclamar la porción que te corresponde.</p>
-      </div>
+    <!-- Banner UMA -->
+    <div class="uma-banner">
+      <p><strong>Transparencia arancelaria:</strong> Nuestros honorarios se calculan conforme a la <strong>Ley 27.423</strong>, tomando como referencia la <strong>Unidad de Medida Arancelaria (UMA)</strong>.</p>
     </div>
 
+    <!-- Grid de consultas -->
+    <div class="consultas-grid">
+
+      <!-- Consulta Express -->
+      <div class="consulta-card">
+        <div class="consulta-header">
+          <h3>Consulta Express</h3>
+          <span class="consulta-duracion">30 minutos</span>
+        </div>
+        <div class="consulta-precio">
+          <span class="precio-uma">0,5 UMA</span>
+          <span class="precio-pesos">(≈ $50.000)</span>
+        </div>
+        <p class="consulta-desc">Ideal para resolver dudas puntuales y recibir orientación jurídica inicial sobre tu situación.</p>
+        <ul class="consulta-beneficios">
+          <li>Videollamada o presencial</li>
+          <li>Orientación legal inicial</li>
+          <li>Próximos pasos concretos</li>
+        </ul>
+        <a href="https://cal.com/juriscaba/30m" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar →</a>
+      </div>
+
+      <!-- Consulta Integral (Destacada) -->
+      <div class="consulta-card destacada">
+        <div class="consulta-header">
+          <h3>Consulta Integral</h3>
+          <span class="consulta-duracion">60 minutos</span>
+        </div>
+        <div class="consulta-precio">
+          <span class="precio-uma">1 UMA</span>
+          <span class="precio-pesos">(≈ $100.000)</span>
+        </div>
+        <p class="consulta-desc">Para un análisis completo. Revisamos documentación, evaluamos viabilidad y explicamos el procedimiento.</p>
+        <ul class="consulta-beneficios">
+          <li>Análisis profundo del caso</li>
+          <li>Revisión de documentación</li>
+          <li>Evaluación de viabilidad</li>
+          <li>Tiempos estimados</li>
+          <li>Presupuesto cerrado de honorarios</li>
+        </ul>
+        <a href="https://cal.com/juriscaba/60m" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar →</a>
+      </div>
+
+      <!-- Consulta Estratégica -->
+      <div class="consulta-card">
+        <div class="consulta-header">
+          <h3>Consulta Estratégica</h3>
+          <span class="consulta-duracion">90 minutos</span>
+        </div>
+        <div class="consulta-precio">
+          <span class="precio-uma">1,5 UMA</span>
+          <span class="precio-pesos">(≈ $150.000)</span>
+        </div>
+        <p class="consulta-desc">Para situaciones complejas: conflictos con herederos, bienes en distintas jurisdicciones, sucesiones internacionales.</p>
+        <ul class="consulta-beneficios">
+          <li>Todo lo anterior, con mayor profundidad</li>
+          <li>Análisis de riesgos y conflictos</li>
+          <li>Estrategia jurídica personalizada</li>
+          <li>Plan de acción detallado paso a paso</li>
+        </ul>
+        <a href="https://cal.com/juriscaba/90m" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar →</a>
+      </div>
+
+    </div>
+
+    <!-- Proceso de reserva -->
+    <div class="proceso-box">
+      <h4>¿Cómo funciona el proceso?</h4>
+      <ol class="proceso-lista">
+        <li><strong>Reservá tu turno</strong> completando el formulario en Cal.com.</li>
+        <li><strong>Recibí un correo</strong> con la confirmación de tu consulta.</li>
+        <li><strong>Te contactamos por WhatsApp</strong> en minutos para coordinar detalles.</li>
+        <li><strong>Aboná</strong> y tu consulta queda confirmada.</li>
+      </ol>
+      <p class="proceso-aviso">⚠️ La reserva tiene validez por <strong>24 horas</strong>. Si no recibimos el pago, el turno se libera. ¿Necesitás más tiempo? Avisanos y lo extendemos sin costo.</p>
+    </div>
+
+    <!-- CTA Final -->
     <div class="cta-box">
-      <h2>¿Necesitás asesoramiento sobre tu herencia?</h2>
-      <p>Analizamos tu situación, tus derechos y te damos un plan de acción concreto para proteger tu patrimonio.</p>
-      <a href="../contacto/index.html" class="btn-white">Asesorarme sobre mi herencia →</a>
+      <h2>¿No sabés qué tipo de consulta necesitás?</h2>
+      <p>Contanos tu situación y te orientamos sobre el formato más adecuado para tu caso.</p>
+      <a href="../contacto/index.html" class="btn-white">Consultar por mi caso →</a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-main">
     <div class="footer-brand">

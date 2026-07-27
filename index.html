@@ -513,14 +513,14 @@ footer { background: #080f0b; padding: 0; }
     </svg>
   </a>
   <!-- NAV BAR DESKTOP -->
-  <ul class="nav-links">
-    <li><a href="sucesiones-caba/index.html" title="Abogados especialistas en sucesiones en CABA">Sucesiones</a></li>
-    <li><a href="servicios/index.html" title="Servicios jurídicos de herencias y testamentos">Servicios</a></li>
-    <li><a href="como-trabajamos/index.html" title="Metodología y proceso de trabajo">Cómo trabajamos</a></li>
-    <li><a href="preguntas-frecuentes/index.html" title="Dudas frecuentes sobre trámites sucesorios">FAQ</a></li>
-    <li><a href="contacto/index.html" title="Formulario de contacto y consultas">Contacto</a></li>    
-    <li><a href="https://cal.com/juriscaba" target="_blank" rel="noopener noreferrer" class="nav-cta" title="Reservar consulta jurídica online">Reservar</a></li>
-  </ul>
+<ul class="nav-links">
+  <li><a href="sucesiones-caba/" title="Abogados especialistas en sucesiones en CABA">Sucesiones</a></li>
+  <li><a href="servicios/" title="Servicios jurídicos de herencias y testamentos">Servicios</a></li>
+  <li><a href="como-trabajamos/" title="Metodología y proceso de trabajo">Cómo trabajamos</a></li>
+  <li><a href="preguntas-frecuentes/" title="Dudas frecuentes sobre trámites sucesorios">FAQ</a></li>
+  <li><a href="contacto/" title="Formulario de contacto y consultas">Contacto</a></li>    
+  <li><a href="reservas/" class="nav-cta" title="Reservar consulta jurídica online">Reservar</a></li>
+</ul>
   <div class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Abrir menú" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
@@ -529,11 +529,13 @@ footer { background: #080f0b; padding: 0; }
 <!-- MENÚ MÓVIL -->
 <div id="mobile-menu" style="display:none;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--line-dark);z-index:99;padding:20px 5%;">
   <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;">
-    <li><a href="sucesiones-caba/index.html" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Sucesiones</a></li>
-    <li><a href="servicios/index.html" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Servicios</a></li>
-    <li><a href="como-trabajamos/index.html" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Cómo trabajamos</a></li>
-    <li><a href="preguntas-frecuentes/index.html" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">FAQ</a></li>
-    <li><a href="contacto/index.html" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--green);font-weight:500;text-decoration:none;">Contacto →</a></li>
+    <li><a href="../sucesiones-caba/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Sucesiones</a></li>
+    <li><a href="../servicios/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Servicios</a></li>
+    <li><a href="../como-trabajamos/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Cómo trabajamos</a></li>
+    <li><a href="../preguntas-frecuentes/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">FAQ</a></li>
+    <li><a href="../contacto/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--ink);text-decoration:none;">Contacto</a></li>
+    <!-- ✅ AGREGÁ ESTA LÍNEA -->
+    <li><a href="../reservas/" onclick="toggleMobileMenu()" style="font-size:15px;color:var(--green);font-weight:500;text-decoration:none;">Reservar →</a></li>
   </ul>
 </div>
 
@@ -551,7 +553,7 @@ footer { background: #080f0b; padding: 0; }
       </h1>
       <p class="hero-sub fade-up fade-up-3">Resolución jurídica de sucesiones en CABA con acompañamiento profesional, plazos claros y honorarios regulados. Sin vueltas, sin tecnicismos innecesarios.</p>
       <div class="hero-actions fade-up fade-up-4">
-        <a href="#reservas" class="btn-primary">
+        <a href="reservas/index.html" class="btn-primary">
           Ver consultas y honorarios
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M2 7h10M7 2l5 5-5 5"/>
@@ -657,136 +659,6 @@ footer { background: #080f0b; padding: 0; }
     </div>
   </div>
 </section>
-
-
-<!-- ============================================
-     SECCIÓN DE RESERVAS
-     ============================================ -->
-<section id="reservas" style="background: var(--sand); padding: 96px 5%;">
-    <div class="container">
-        <div class="section-tag">
-            <span class="section-tag-line"></span>RESERVAS
-        </div>
-        <h2 class="section-heading">Elegí el tipo de consulta</h2>
-        <p class="section-lead" style="max-width: 600px;">
-            Cada consulta es una sesión de trabajo con un abogado especialista en derecho sucesorio y patrimonial. Elegí el formato según la complejidad de tu situación.
-        </p>
-
-        <div style="margin: 40px 0 50px 0; padding: 18px 24px; background: var(--green-light); border-left: 4px solid var(--green); border-radius: var(--radius-sm);">
-            <p style="font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6;">
-                <strong style="color: var(--green);">Transparencia arancelaria:</strong>
-                Nuestros honorarios se calculan conforme a la <strong>Ley 27.423</strong>, tomando como referencia la <strong>Unidad de Medida Arancelaria (UMA)</strong>.
-            </p>
-        </div>
-
-        <div class="reservas-grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-
-            <div style="background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--ink);">Consulta Express</h3>
-                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: var(--green-light); padding: 3px 12px; border-radius: var(--radius-pill);">30 minutos</span>
-                </div>
-                <div style="margin: 8px 0 14px 0;">
-                    <span style="font-size: 22px; font-weight: 700; color: var(--ink);">0,5 UMA</span>
-                    <span style="font-size: 14px; color: var(--ink-soft); margin-left: 6px;">(≈ $50.000)</span>
-                </div>
-                <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px;">
-                    Ideal para resolver dudas puntuales y recibir orientación jurídica inicial.
-                </p>
-                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Videollamada o presencial
-                    </li>
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Orientación legal inicial
-                    </li>
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Próximos pasos concretos
-                    </li>
-                </ul>
-                <a href="https://cal.com/juriscaba/30m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--green); color: #fff; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
-            </div>
-
-            <div style="background: var(--green); border-radius: var(--radius); padding: 32px 28px; border: none; transition: transform 0.2s ease, box-shadow 0.2s ease; position: relative; color: #fff;">
-                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fff; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 18px; border-radius: var(--radius-pill); box-shadow: 0 2px 8px rgba(0,0,0,0.10);">
-                    ★ RECOMENDADA
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: #fff;">Consulta Integral</h3>
-                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: rgba(255,255,255,0.20); padding: 3px 12px; border-radius: var(--radius-pill);">60 minutos</span>
-                </div>
-                <div style="margin: 8px 0 14px 0;">
-                    <span style="font-size: 22px; font-weight: 700; color: #fff;">1 UMA</span>
-                    <span style="font-size: 14px; color: rgba(255,255,255,0.70); margin-left: 6px;">(≈ $100.000)</span>
-                </div>
-                <p style="font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 18px;">
-                    Para un análisis completo. Revisamos documentación, evaluamos viabilidad y explicamos el procedimiento.
-                </p>
-                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
-                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: rgba(255,255,255,0.60);">✓</span> Análisis profundo del caso
-                    </li>
-                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: rgba(255,255,255,0.60);">✓</span> Revisión de documentación
-                    </li>
-                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: rgba(255,255,255,0.60);">✓</span> Evaluación de viabilidad
-                    </li>
-                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: rgba(255,255,255,0.60);">✓</span> Tiempos estimados
-                    </li>
-                    <li style="font-size: 13px; color: rgba(255,255,255,0.85); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: rgba(255,255,255,0.60);">✓</span> Presupuesto cerrado de honorarios
-                    </li>
-                </ul>
-                <a href="https://cal.com/juriscaba/60m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: var(--green); padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
-            </div>
-
-            <div style="background: var(--white); border-radius: var(--radius); padding: 32px 28px; border: 1px solid var(--line-dark); transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                    <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--ink);">Consulta Estratégica</h3>
-                    <span style="font-size: 13px; font-weight: 500; color: var(--green); background: var(--green-light); padding: 3px 12px; border-radius: var(--radius-pill);">90 minutos</span>
-                </div>
-                <div style="margin: 8px 0 14px 0;">
-                    <span style="font-size: 22px; font-weight: 700; color: var(--ink);">1,5 UMA</span>
-                    <span style="font-size: 14px; color: var(--ink-soft); margin-left: 6px;">(≈ $150.000)</span>
-                </div>
-                <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px;">
-                    Para situaciones complejas: conflictos con herederos, bienes en distintas jurisdicciones, sucesiones internacionales.
-                </p>
-                <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Todo lo anterior, con mayor profundidad
-                    </li>
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Análisis de riesgos y conflictos
-                    </li>
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Estrategia jurídica personalizada
-                    </li>
-                    <li style="font-size: 13px; color: var(--ink-soft); padding: 4px 0; display: flex; align-items: center; gap: 8px;">
-                        <span style="color: var(--green);">✓</span> Plan de acción detallado paso a paso
-                    </li>
-                </ul>
-                <a href="https://cal.com/juriscaba/90m" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--green); color: #fff; padding: 10px 22px; border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; text-align: center; width: 100%; box-sizing: border-box;">Reservar →</a>
-            </div>
-
-        </div>
-
-        <div style="margin-top: 50px; padding: 28px 32px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line-dark);">
-            <h4 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: var(--ink);">¿Cómo funciona el proceso?</h4>
-            <ol style="padding-left: 20px; margin: 0 0 14px 0; font-size: 14px; color: var(--ink-soft); line-height: 1.8;">
-                <li><strong>Reservá tu turno</strong> completando el formulario.</li>
-                <li><strong>Recibí un correo</strong> con la confirmación.</li>
-                <li><strong>Te contactamos por WhatsApp</strong> en minutos.</li>
-                <li><strong>Aboná</strong> y tu consulta queda confirmada.</li>
-            </ol>
-            <p style="font-size: 13px; color: var(--ink-muted); margin: 0; background: var(--sand); padding: 10px 16px; border-radius: var(--radius-sm);">
-                ️ La reserva tiene validez por <strong>24 horas</strong>. Si no recibimos el pago, el turno se libera. ¿Necesitás más tiempo? Avisanos y lo extendemos sin costo.
-            </p>
-        </div>
-    </div>
-</section> 
 
 <section id="contacto">
   <div class="container">

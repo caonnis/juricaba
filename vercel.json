@@ -7,6 +7,7 @@
     { "source": "/servicios", "destination": "/servicios/index.html" },
     { "source": "/como-trabajamos", "destination": "/como-trabajamos/index.html" },
     { "source": "/preguntas-frecuentes", "destination": "/preguntas-frecuentes/index.html" },
-    { "source": "/contacto", "destination": "/contacto/index.html" }
+    { "source": "/contacto", "destination": "/contacto/index.html" },
+    { "source": "/reservas", "destination": "/reservas/index.html" }
   ]
 }
