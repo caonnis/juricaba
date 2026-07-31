@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Página Principal -->
-  <url>
-    <loc>https://www.juriscaba.com/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<!--  Página Principal  -->
+<url>
+<loc>https://www.juriscaba.com/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <!-- Páginas de Servicios y Temas -->
-  <url>
-    <loc>https://www.juriscaba.com/sucesiones-caba/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/servicios/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/como-trabajamos/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/sucesiones-complejas/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!--  Páginas de Servicios Principales (Alta prioridad)  -->
+<url>
+<loc>https://www.juriscaba.com/servicios/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.juriscaba.com/sucesiones-caba/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.juriscaba.com/reservas/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
 
-  <!-- Guías Educativas -->
-  <url>
-    <loc>https://www.juriscaba.com/declaratoria-herederos/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/herencias/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/preguntas-frecuentes/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<!--  Páginas de Contenido Especializado  -->
+<url>
+<loc>https://www.juriscaba.com/sucesiones-complejas/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.juriscaba.com/como-trabajamos/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 
-  <!-- Contacto y Reservas -->
-  <url>
-    <loc>https://www.juriscaba.com/contacto/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.juriscaba.com/reservas/</loc>
-    <lastmod>2025-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+<!--  Guías Educativas y Contenido SEO (Buenas para long-tail)  -->
+<url>
+<loc>https://www.juriscaba.com/herencias/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.juriscaba.com/declaratoria-herederos/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.juriscaba.com/preguntas-frecuentes/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 
+<!--  Contacto  -->
+<url>
+<loc>https://www.juriscaba.com/contacto/</loc>
+<lastmod>2026-08-01</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
