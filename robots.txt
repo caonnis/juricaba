@@ -1,4 +1,14 @@
+# Reglas para todos los robots
 User-agent: *
 Allow: /
 
+# Bloquear áreas sensibles si existen (ajusta según tu CMS)
+# Disallow: /wp-admin/
+# Disallow: /cgi-bin/
+
+# Reglas específicas para Googlebot (opcional, pero recomendado)
+User-agent: Googlebot
+Allow: /
+
+# Declaración del Sitemap
 Sitemap: https://www.juriscaba.com/sitemap.xml
