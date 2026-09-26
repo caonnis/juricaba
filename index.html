@@ -127,16 +127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
-<script>
-  function splashEnter() {
-    var s = document.getElementById('splash');
-    if (!s) return;
-    s.classList.add('hidden');
-    setTimeout(function(){ s.style.display='none'; }, 650);
-    try { sessionStorage.setItem('splashSeen','1'); } catch(e){}
-  }
-  window.splashEnter = splashEnter;
-</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W495WNBTJ"></script>
 <script>
@@ -825,7 +816,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-left">
-      <span class="footer-copy">© 2025 Juris CABA · Matrícula CPACF · Confidencialidad garantizada</span>
+      <span class="footer-copy">© <span id="current-year">2026</span> Juris CABA · Matrícula CPACF · Confidencialidad garantizada</span>
       <ul class="footer-legal-links">
         <li><a href="#">Privacidad</a></li>
         <li><a href="#">Términos</a></li>
@@ -887,20 +878,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 })();
 
-window.splashEnter = function() {
-  var s = document.getElementById('splash');
-  if (!s) return;
-  s.classList.add('hidden');
-  setTimeout(function(){ s.style.display = 'none'; }, 650);
-  try { sessionStorage.setItem('splashSeen', '1'); } catch(e) {}
-};
-try {
-  if (sessionStorage.getItem('splashSeen')) {
-    var s = document.getElementById('splash');
-    if (s) s.style.display = 'none';
-  }
-} catch(e) {}
-
 window.toggleMobileMenu = function() {
   var m = document.getElementById('mobile-menu');
   if (!m) return;
@@ -909,6 +886,9 @@ window.toggleMobileMenu = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+  var y = document.getElementById('current-year');
+  if (y) y.textContent = new Date().getFullYear();
+
   document.querySelectorAll('.faq-item').forEach(function(item) {
     item.querySelector('.faq-question').addEventListener('click', function() {
       var isOpen = item.classList.contains('open');
@@ -918,6 +898,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!isOpen) item.classList.add('open');
     });
   });
+});
 
   window.handleSubmit = function(e) {
     e.preventDefault();
